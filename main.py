@@ -3,6 +3,7 @@ from flask_cors import CORS
 import os
 from datetime import datetime
 
+# ✅ Ye line sabse important hai - app variable
 app = Flask(__name__)
 CORS(app)
 
@@ -51,6 +52,7 @@ def generate():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# ✅ Ye line bhi important hai
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
